@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- <table>
+		<tr th:each="s:${manufacturer}">
+			<td th:text="${s.name}">Frank</td>
+			<td><a th:href="@{/update/}+${s.id}">Edit</a></td>
+			<td><a th:href="@{/sercure/delete/}+${s.id}">Delete</a></td>
+		</tr>
+	</table>-->
+	<form method="post" th:action="@{/insert}">
+
+		<input type="submit" value="Insert New Vehicle" />
+	</form>
+	<form method="post" th:action="@{/update/+${s.id}}">
+		<input type="submit" value="Update A Vehicle" />
+	</form>
+	<form method="post" th:action="@{/secure/delete/+${s.id}}">
+		<input type="submit" value="Delete A Vehicle" />
+	</form>
+	<!-- <a href="insert.html">Insert Vehicle</a><br>
+	<a href="update.html">Update Vehicle</a><br>
+	<a href="secure/delete.html">Delete Vehicle</a><br>-->
+</body>
+</html>

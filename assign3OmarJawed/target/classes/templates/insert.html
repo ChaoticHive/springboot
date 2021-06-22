@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" th:action="@{/addCar}" th:object="${Car}">
+		Manufacturer:<select th:field="*{manufacturerID}">
+		<option th:each="s:*{manufacturerID}"
+		th:value="${s.manufacturer}"></option>
+		</select><br>
+		Model:<input type="text" th:field="*{model}"><br>
+		Color:<input type="text" th:field="*{color}"><br>
+		Year:<input type="number" th:field="*{year}"><br>
+		Price:<input type="number" th:field="*{price}"><br>
+		<input type="submit" value="Insert Vehicle"/>
+	</form>
+</body>
+</html>
