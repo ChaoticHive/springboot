@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>This is addCourse.html!</h1>
+	<form method="post" action="#" th:action="@{/addCourse}" th:object="${Course}">	
+		Course Name: <input type="text"/>
+		Credit Earned: <input type="number"/>
+		Term Offered: <input type="text"/><br>
+	<select th:field="department" th:each="s:${department}">
+		<option th:each="s:${department}"></option>
+	</select><br>
+		<input type="submit" value="Add Course"/>
+	</form>
+	
+	<form method="get" action="#" th:action="@{/}">
+		<input type="submit" value="Back"/>
+	</form>
+</body>
+</html>

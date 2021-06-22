@@ -1,0 +1,12 @@
+CREATE TABLE department(
+	id LONG PRIMARY KEY AUTO_INCREMENT, depName
+	VARCHAR(255)
+);
+
+CREATE TABLE course(
+	id LONG PRIMARY KEY AUTO_INCREMENT, 
+	courseName VARCHAR(255)  NOT NULL,
+	courseCredit INTEGER,
+	termOffered VARCHAR(255)  NOT NULL,
+	department VARCHAR(255)  NOT NULL
+);

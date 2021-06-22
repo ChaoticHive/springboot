@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr th:each="s:${courseList}">
+			<td th:text="${s.courseName}">Course</td>
+			<td th:text="${s.courseCredit}">Course</td>
+			<td th:text="${s.termOffered}">Course</td>
+			<td th:text="${s.department}">Course</td>
+			<td><a th:href="@{/editCourse/}+${s.id}">Edit</a></td>
+			<td><a th:href="@{/deleteCourse/}+${s.id}">Delete</a></td>
+		</tr>
+	</table>
+</body>
+</html>

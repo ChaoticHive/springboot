@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>This is addDepartment.html!</h1>
+	<form method="post" action="#" th:action="@{/addDepartment}" th:object="${Department}">
+		Department Name: <input type="text" th:field="*{depName}"/>
+		<input type="submit" value="Add Department"/>
+	</form>
+	
+	<form method="get" action="#" th:action="@{/}">
+		<input type="submit" value="Back"/>
+	</form>
+</body>
+</html>
